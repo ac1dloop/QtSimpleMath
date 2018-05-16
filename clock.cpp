@@ -7,14 +7,15 @@ namespace M {
 
 Clock::Clock(QWidget *parent)
 {
+    setStyleSheet("background: white");
     m_Time=30000;
-    setSegmentStyle(Filled);
+    setSegmentStyle(Flat);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
     timer->start(1000);
     showTime();
-    resize(100,100);
+    resize(200,200);
 }
 
 void Clock::showTime()

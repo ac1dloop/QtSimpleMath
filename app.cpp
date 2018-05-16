@@ -4,8 +4,8 @@
 namespace M {
 
 App::App(int argc, char *argv[]):QApplication(argc,argv) {
-    setApplicationName("huy");
-    setApplicationDisplayName(tr("Pizda"));
+    setApplicationName("pizda");
+    setApplicationDisplayName(tr("QtSimpleMath"));
 }
 
 } //M space

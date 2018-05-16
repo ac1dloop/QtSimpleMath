@@ -2,14 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QWidget>
 #include <QFrame>
 #include <QLineEdit>
 #include <QAction>
-#include <QString>
 
 namespace M {
 
+class QWidget;
 class Clock;
 class Expression;
 
@@ -28,10 +27,31 @@ public:
     int m_Res;
     Clock *m_Clock;
     Expression *m_Expression;
+    QAction *m_help;
+    QAction *m_about;
+    QAction *m_aboutQt;
+    QAction *m_diff_1; //difficulty EASY
+    QAction *m_diff_2;
+    QAction *m_diff_3;
+    QAction *m_diff_ex; //EXTREME
+    QAction *m_mode_1; //mode +
+    QAction *m_mode_2; //mode -
+    QAction *m_mode_3; //mode /
+    QAction *m_mode_4; //mode *
+    QAction *m_mode_rnd; //mode random
+
 
 public slots:
-    void ok_clicked();
     void hit_enter();
+    void setMode1();
+    void setMode2();
+    void setMode3();
+    void setMode4();
+    void setModeRnd();
+    void setDifficulty1();
+    void setDifficulty2();
+    void setDifficulty3();
+    void setDifficultyEx();
 
 };
 

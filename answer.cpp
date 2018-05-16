@@ -6,6 +6,7 @@ namespace M {
 
 Answer::Answer(QWidget *parent)
 {
-    setInputMask("99;_");
+    setInputMask("0000;_");
+    setStyleSheet("background: white");
 }
 } //M space
