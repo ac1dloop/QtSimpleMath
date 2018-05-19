@@ -105,6 +105,11 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent){
     connect(m_diff_2, SIGNAL(triggered()), this, SLOT(setDifficulty2()));
     connect(m_diff_3, SIGNAL(triggered()), this, SLOT(setDifficulty3()));
     connect(m_diff_ex, SIGNAL(triggered()), this, SLOT(setDifficultyEx()));
+    connect(m_mode_1, SIGNAL(triggered()), this, SLOT(setMode1()));
+    connect(m_mode_2, SIGNAL(triggered()), this, SLOT(setMode2()));
+    connect(m_mode_3, SIGNAL(triggered()), this, SLOT(setMode3()));
+    connect(m_mode_4, SIGNAL(triggered()), this, SLOT(setMode4()));
+    connect(m_mode_rnd, SIGNAL(triggered()), this, SLOT(setModeRnd()));
 
     setCentralWidget(m_Frame);
     m_Answer->setFocus(Qt::OtherFocusReason);
@@ -150,18 +155,31 @@ void MainWindow::setDifficultyEx()
 }
 void MainWindow::setMode1()
 {
+    m_Expression->setMode(0);
 }
 void MainWindow::setMode2()
 {
+    m_Expression->setMode(1);
 }
 void MainWindow::setMode3()
 {
+    m_Expression->setMode(2);
 }
 void MainWindow::setMode4()
 {
+    m_Expression->setMode(3);
 }
 void MainWindow::setModeRnd()
 {
+    m_Expression->setMode(4);
+}
+void MainWindow::on_about()
+{
+
+}
+void MainWindow::on_about_qt()
+{
+
 }
 
 } //M space

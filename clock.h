@@ -2,6 +2,8 @@
 #define CLOCK_H
 
 #include <QLCDNumber>
+#include <QMessageBox>
+#include <QApplication>
 
 namespace M {
 
